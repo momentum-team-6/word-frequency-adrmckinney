@@ -21,7 +21,6 @@ def print_word_freq(file):
         if elem in punc_list:
             read_file = read_file.replace(elem, " ")
 
-    # for word in read_file:
     read_file = read_file.split()
 
     read_file_copy = read_file.copy()
@@ -29,18 +28,33 @@ def print_word_freq(file):
     for word in read_file:
         if word in STOP_WORDS:
             read_file_copy.remove(word)
-        
-    # print(read_file_copy)
     
     read_file_copy.sort()
-
-    print(read_file_copy.count('brim'))
 
     for word in read_file_copy:
         counts_dict[word] = read_file_copy.count(word)
     
     
-    print(counts_dict)
+    # sorted_words = sorted(counts_dict.items(), key=lambda x:x[1], reverse=True)
+    
+    # print(counts_dict.items())
+
+    # print(counts_dict.keys())
+    # values_sorted = sorted(counts_dict.values(), key=None, reverse=True)
+    # print(values_sorted)
+
+    # for item in counts_dict:
+    #     key = counts_dict.keys()
+    #     value = counts_dict.values()
+    #     print(f"{key} | {value}")
+    
+
+    # for item in counts_dict.items():
+    #     print(item)
+        
+
+    # print(sorted_words)
+    # print(f'{sorted_words[key]} | {sorted_words[key][value]}')
     
     
         
